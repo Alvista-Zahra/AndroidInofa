@@ -15,14 +15,12 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Tombol Daftar ditekan
         binding.btnDaftar.setOnClickListener {
             val nama = binding.etNamaLengkap.text.toString().trim()
             val email = binding.etEmail.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
             val role = if (binding.rbClient.isChecked) "Klien" else "Developer"
 
-            // Validasi input sederhana
             if (nama.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Harap isi semua data", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -38,8 +36,6 @@ class RegisterActivity : AppCompatActivity() {
                 "Akun berhasil dibuat sebagai $role",
                 Toast.LENGTH_LONG
             ).show()
-
-            // TODO: Tambahkan logika simpan data ke database / Firebase Auth
         }
     }
 }
