@@ -7,7 +7,6 @@ import com.example.inofa.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
 
-    // View Binding
     private lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
